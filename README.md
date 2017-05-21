@@ -1,20 +1,13 @@
 # Artificial Intelligence Nanodegree
 ## Introductory Project: Diagonal Sudoku Solver
 
-# Question 1 (Naked Twins)
-Q: How do we use constraint propagation to solve the naked twins problem?  
-A: We constrain the space into smaller units (rows, columns, squares, diagonals) and impose the naked twins rule one time for each unit. The other constraint-bound functions (eliminate() and only_choice()) are each called before and after the naked_twins() function through the recursive search, which means the space will change further as these functions create conditions that satisfy the other functions, until a final board is reached or the program fails. 
+# Overview
+The program using constraint propagation and search trees to solve any (solvable) sudoku puzzle. Uses pygame to visualize moves (see below).
 
-# Question 2 (Diagonal Sudoku)
-Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: The diagonal is a constraint in the space, so applying the constraint-bound functions to the diagonals will produce a reduction in the possible digits in boxes in other, overlappoing constrained subspaces, which in turn propogate more reductions in possible digits and ultimately final digit decisions as search is called recursively. 
 
 ### Install
 
 This project requires **Python 3**.
-
-We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
-Please try using the environment we provided in the Anaconda lesson of the Nanodegree.
 
 ##### Optional: Pygame
 
