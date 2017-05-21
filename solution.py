@@ -167,8 +167,6 @@ def reduce_puzzle(values):
 
 
 def search(values):
-    global search_count
-    search_count += 1
     values = reduce_puzzle(values)
     if values is False:
         return False
